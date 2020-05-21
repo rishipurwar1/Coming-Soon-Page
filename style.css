@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --text-color:hsl(0, 0%, 59%);
+    --bold-color: hsl(209, 33%, 12%);
+    --border-color: hsl(223, 100%, 88%);
+    --border-bg: hsl(223, 87%, 63%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 100px 0;
+}
+
+.dashboard {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.logo {
+    padding-bottom: 40px;
+}
+
+.container h1 {
+    font-weight: 300;
+    color: var(--text-color);
+    padding-bottom: 25px;
+    font-size: 30px;
+}
+
+.container h1 strong {
+    color: var(--bold-color);
+    
+}
+
+.container p {
+    color: var(--bold-color);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin-top: 40px;
+}
+
+section {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    padding: 18px 60px 18px 40px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: 2px solid var(--border-color);
+    font-size: 18px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input::placeholder {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+form button {
+    cursor: pointer;
+    width: 100%;
+    padding: 18px 40px 18px 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--border-bg);
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+form button:focus {
+    outline: none;
+}
+
+form small {
+    display: none;
+}
+
+small.error {
+    display: inline-block;
+    color: hsl(354, 100%, 66%);
+    padding-left: 30px;
+}
+
+input.error-input {
+    border: 2px solid hsl(354, 100%, 66%);
+
+}
+
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h4 {
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+i {
+    cursor: pointer;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    input.error-input {
+        margin-bottom: 0;
+    }
+    small.error {
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container .dashboard {
+        width: 70%;
+    }
+
+    small.error {
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    input.error-input {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container .dashboard {
+        width: 60%;
+    }
+
+    form {
+        width: 60%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form input {
+        margin-bottom: 0;
+    }
+
+    form section {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        width: 70%;
+    }
+
+    input.error-input {
+        margin-top: 35px;
+        margin-bottom: 0px;
+    }
+
+    form button {
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+}
